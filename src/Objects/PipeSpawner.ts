@@ -22,7 +22,6 @@ export default class PipeSpawner {
 
   startSpawning(interval: number, onSpawn: (pipe: PipePair) => void) {
     this.isSpawning = true;
-
     this.spawnEvent = this.m_scene.time.addEvent({
       delay: interval,
       loop: true,

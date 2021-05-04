@@ -4,14 +4,18 @@ import GameScene from './Scenes/GameScene';
 
 const config = {
     type: Phaser.AUTO,
-    parent: 'phaser',
-    width: 320,
-    height: 480,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        parent: 'phaser',
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 320,
+        height: 480
+    },
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true,
-            gravity: {y: 150}
+            debug: false,
+            gravity: {y: 0}
         }
     },
     scene: [ PreloadScene, GameScene ]
